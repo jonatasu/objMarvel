@@ -1,0 +1,204 @@
+h2.page-title{
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    text-align: center;
+    margin: 3rem 0
+}
+
+.search-form{
+    margin-bottom: 2.5rem;
+}
+.search-form label{
+    display: block;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.search-form .form-group{
+    position: relative;
+    width: 100%;
+}
+@media (max-width: 576px) {
+    h2.page-title,
+    .search-form label{
+        text-align: center;
+    }
+}
+@media (min-width: 576px) {
+    .search-form .form-group{
+        max-width: 295px;
+    }
+}
+.search-form .form-group input{
+    width: 100%;
+    max-height: 32px;
+    padding: .5rem 2rem .5rem 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--dark-snow);
+    border-radius: var(--border-radius);
+}
+.search-form .form-group button[type='submit']{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.card-grid {}
+
+.card-grid .grid-header {}
+
+.card-grid .grid-header .header {
+    padding: .5625rem 1.5625rem;
+    font-size: .75rem;
+    line-height: 1rem;
+    color: var(--smoke);
+}
+
+.card-grid .grid-row-card {
+    margin-bottom: .5rem;
+    color: var(--dark-smoke);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 5px var(--shadow);
+    transition: all .2s ease;
+}
+
+.card-grid .grid-row-card,
+.card-grid .grid-row-card:hover,
+.card-grid .grid-row-card:focus {
+    text-decoration: none;
+}
+
+.card-grid .grid-row-card:hover,
+.card-grid .grid-row-card:focus {
+    box-shadow: 0px 1px 10px var(--dark-shadow);
+}
+
+.card-grid .grid-header,
+.card-grid .grid-row-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 576px) {
+    .card-grid .grid-header,
+    .card-grid .grid-row-card {
+        grid-template-columns: 1fr;
+    }
+    .card-grid .grid-header .header:not(:first-child){
+        display: none;
+    }
+    .card-grid .grid-header .header:first-child{
+        padding-left: 5.9375rem
+    }
+}
+
+.card-grid .grid-row-card .card-content {
+    padding: 1.25rem 1.5625rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-grid .grid-row-card .card-content.card-character {
+    display: flex;
+    align-items: center;
+}
+
+.card-grid .grid-row-card .card-content.card-character .card-photo {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    margin-right: 1.5625rem;
+    border-radius: var(--border-radius);
+}
+
+.card-grid .grid-row-card .card-content.card-character .card-photo img {
+    width: 100%;
+}
+
+.card-grid .grid-row-card .card-content.card-series,
+.card-grid .grid-row-card .card-content.card-events {
+    font-size: .875rem;
+    line-height: 1rem;
+}
+@media (max-width: 576px) {
+    .card-grid .grid-row-card .card-content.card-series,
+    .card-grid .grid-row-card .card-content.card-events {
+        display:none;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination .page-item:not(:first-child) {
+    margin-left: 1rem;
+}
+
+.pagination .page-item .page-link {
+    display: block;
+    cursor: pointer;
+    border: 1px solid var(--dark-snow);
+    background-color: var(--snow);
+    color: var(--dark-smoke);
+    font-size: .875rem;
+    line-height: 1.1875rem;
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all .2s ease;
+}
+
+.pagination .page-item .page-link.page-link-nav,
+.pagination .page-item .page-link.page-link-nav:hover,
+.pagination .page-item .page-link.page-link-nav:focus {
+    border: 0 none;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    background-color: var(--white);
+}
+
+.pagination .page-item .page-link.page-link-nav:hover,
+.pagination .page-item .page-link.page-link-nav:focus {
+    color: var(--blue);
+}
+
+.pagination .page-item .page-link,
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link:focus {
+    text-decoration: none
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item.active .page-link:hover,
+.pagination .page-item.active .page-link:focus {
+    background-color: var(--dark-blue);
+    cursor: default;
+}
+
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link:focus {
+    background-color: var(--blue);
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link:focus {
+    color: var(--white);
+}
+
+.page-link-prev{
+    transform: rotate(180deg)
+}
