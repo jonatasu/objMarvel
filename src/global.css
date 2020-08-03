@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* BASE */
@@ -33,33 +40,46 @@ body {
 }
 
 .grid-structure{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: 110px 0px 1fr 0px 90px;
     grid-template-rows: 110px 1fr 90px;
     gap: 0px 0px;
-    grid-template-areas: "header" "content" "footer";
+        grid-template-areas: "header" "content" "footer";
 }
 
 .grid-structure > .content{
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: content;
     min-height: calc(100vh - 200px);
 }
 
 header > .header-content, footer > .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 1.25rem 1.5rem;
     background-color: var(--white);
     height: 100%;
 }
 
 header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: header;
     padding-bottom: 2.5rem;
 }
 
 header > .header-content {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 header > .header-content>h1>a>img {
@@ -68,9 +88,15 @@ header > .header-content>h1>a>img {
 }
 
 header .user {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font: caption;
 }
 @media (max-width: 576px) {
@@ -195,6 +221,8 @@ b {
     background-color: var(--snow);
     border-radius: var(--border-radius);
     cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
     transition: all .2s ease;
 }
 .btn,
@@ -227,12 +255,18 @@ b {
 }
 
 footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
     grid-area: footer;
     padding-top: 1.25rem;
 }
 footer > .footer-content{
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 footer.copyright{
     padding: 1.25rem;
